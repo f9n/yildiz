@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:yildiz/routes.dart';
+
 void main() {
   runApp(YildizApp());
 }
@@ -13,7 +15,7 @@ class YildizApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes: {},
+      routes: routes,
     );
   }
 }
