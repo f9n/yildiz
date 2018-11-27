@@ -15,8 +15,20 @@ class HomeScreen extends StatelessWidget {
           crossAxisSpacing: 10.0,
           crossAxisCount: 2,
           children: <Widget>[
-            Text('Yemekhane'),
-            Text('Hakkımızda'),
+            Container(
+              margin: EdgeInsets.all(5.0),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.info),
+                    tooltip: 'Hakkımızda',
+                    onPressed: () => Navigator.pushNamed(context, '/about'),
+                  ),
+                  Text('Hakkımızda'),
+                ],
+              ),
+            ),
           ],
         ),
       ),
