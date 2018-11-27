@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'card.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,34 +17,15 @@ class HomeScreen extends StatelessWidget {
           crossAxisSpacing: 10.0,
           crossAxisCount: 2,
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(5.0),
-              alignment: Alignment.center,
-              child: Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.fastfood),
-                    tooltip: 'Yemekhane',
-                    onPressed: () =>
-                        Navigator.pushNamed(context, '/dining_hall'),
-                  ),
-                  Text('Yemekhane'),
-                ],
-              ),
+            HomeCard(
+              text: 'Yemekhane',
+              icon: Icons.fastfood,
+              navigation: '/dining_hall',
             ),
-            Container(
-              margin: EdgeInsets.all(5.0),
-              alignment: Alignment.center,
-              child: Column(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.info),
-                    tooltip: 'Hakkımızda',
-                    onPressed: () => Navigator.pushNamed(context, '/about'),
-                  ),
-                  Text('Hakkımızda'),
-                ],
-              ),
+            HomeCard(
+              text: 'Hakkımızda',
+              icon: Icons.info,
+              navigation: '/about',
             ),
           ],
         ),
