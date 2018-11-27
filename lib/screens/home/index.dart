@@ -21,6 +21,21 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   IconButton(
+                    icon: Icon(Icons.fastfood),
+                    tooltip: 'Yemekhane',
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/dining_hall'),
+                  ),
+                  Text('Yemekhane'),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(5.0),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  IconButton(
                     icon: Icon(Icons.info),
                     tooltip: 'Hakkımızda',
                     onPressed: () => Navigator.pushNamed(context, '/about'),
